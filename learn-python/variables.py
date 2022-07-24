@@ -67,8 +67,20 @@ print(varOne)
 print(varTwo)
 print(varThree)
 
+# This can be used to swap the values of multiple variables as well
+
+a, b, c = 1, 2, 3
+
+print(a, b, c)
+
+a, b, c = c, a, b
+
+print(a, b, c)
+
 # Unpack a collection of values (list, tuple, etc.)
 # The values are extracted and assigned to variables
+
+# This works for lists
 
 names = ["Alice", "Bob", "Charlie"]
 nameOne, nameTwo, nameThree = names
@@ -76,6 +88,49 @@ nameOne, nameTwo, nameThree = names
 print(nameOne)
 print(nameTwo)
 print(nameThree)
+
+# tuples,
+
+numbers = (1, 2, 3)
+numberOne, numberTwo, numberThree = numbers
+
+print(numberOne)
+print(numberTwo)
+print(numberThree)
+
+# strings,
+
+string = "Abc"
+stringOne, stringTwo, stringThree = string
+
+print(stringOne)
+print(stringTwo)
+print(stringThree)
+
+# dictionaries
+
+dictionary = {"A": 1, "B": 2}
+keyOne, keyTwo = dictionary  # assign the keys
+
+print(keyOne)
+print(keyTwo)
+
+valueOne, valueTwo = dictionary.values()  # assign the values
+
+print(valueOne)
+print(valueTwo)
+
+itemOne, itemTwo = dictionary.items()  # assign the items as tuples
+
+print(itemOne)
+print(itemTwo)
+
+# and coordinates (which in this case are a list of floats)
+
+coordinates = [1.467, 3.653]
+x, y = coordinates
+
+print(x, y)
 
 # Use print() to output a single variable
 
@@ -85,9 +140,7 @@ print(varOne)
 
 # Use print() to output multiple variables
 
-varOne = "How"
-varTwo = "are"
-varThree = "you?"
+varOne, varTwo, varThree = "How", "are", "you?"
 
 print(varOne, varTwo, varThree)
 
@@ -98,9 +151,7 @@ print(varOne + varTwo + varThree)
 # This does NOT work for numbers because "+" is a mathematical operator
 # (addition) in this case
 
-varOne = 1
-varTwo = 2
-varThree = 3
+varOne, varTwo, varThree = 1, 2, 3
 
 print(varOne + varTwo + varThree)
 
@@ -108,8 +159,7 @@ print(varOne + varTwo + varThree)
 # operator, an error occurs
 # Use ","  to output multiple variables, especially of different data types
 
-varOne = 1
-varTwo = "Hello"
+varOne, varTwo = 1, "Hello"
 
 print(varOne, varTwo)
 
