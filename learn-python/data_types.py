@@ -17,7 +17,6 @@ print(type(variable))
 
 # Alternatively, the data type can be specified via constructor functions
 # (referred to as casting)
-# The constructor functions are shown below each data type
 
 # The following data types will be elaborated in their respective .py files:
 #   * Strings (strings.py)
