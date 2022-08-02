@@ -21,3 +21,6 @@ print(type(variable))
 # The following data types will be elaborated in their respective .py files:
 #   * Strings (strings.py)
 #   * Numbers (numbers.py)
+
+# Utilize NumPy (numerical data) or pandas (tabular data) instead of regular
+# Python for optimal performance (more advanced)
