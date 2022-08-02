@@ -125,3 +125,7 @@ print(variable)
 variable = random.randrange(1, 100)
 print(variable)
 print(type(variable))
+
+# Underscore separators can be replaced by a symbol in f-strings
+variable = 1_000_000
+print(f"{variable:,}")
