@@ -132,6 +132,28 @@ x, y = coordinates
 
 print(x, y)
 
+# Values can be ignored via "_"
+
+valueOne, _, valueThree = (1, 2, 3)
+
+print(valueOne)
+print(valueThree)
+
+# and multiple values can be assigned to one variable via "*"
+
+valueOne, *valueTwo, valueThree = (1, 2, 3, 4, 5)
+
+print(valueOne)
+print(valueTwo)  # Output = [2, 3, 4]
+print(valueThree)
+
+# Both can be combined as well
+
+*_, valueTwo, valueThree = (1, 2, 3, 4, 5)
+
+print(valueTwo)  # Output = 4
+print(valueThree)  # Output = 5
+
 # Use print() to output a single variable
 
 varOne = 1
