@@ -136,50 +136,42 @@ print(f"{variable:,}")
 # Addition "+"
 # Adds two values
 
-variable = 1 + 1  # variable = 2
-print(variable)
+print(1 + 1)  # Output = 2
 
 # Subtraction "-"
 # Subtracts the second value from the first value
 
-variable = 3 - 2  # variable = 1
-print(variable)
+print(3 - 2)  # Output = 1
 
 # Multiplication "*"
 # Multiplies two values to find the product
 
-variable = 2 * 3  # variable = 6
-print(variable)
+print(2 * 3)  # Output = 6
 
 # Division "/"
 # Divides the first operand by the second to find the quotient
 # Division always returns a float
 # Use int() to return an integer
 
-variable = 9 / 3  # variable = 3.0
-print(variable)
+print(9 / 3)  # Output = 3.0
 
-variable = int(9 / 3)  # variable = 3
-print(variable)
+print(int(9 / 3))  # Output = 3
 
 # Floor division "//"
 # Divides the first operand by the second to find the floor of the quotient
 # (rounding down to the nearest integer)
 
-variable = 7 // 3  # variable = 2
-print(variable)
+print(7 // 3)  # Output = 2
 
 # Modulus "%"
 # Divides the first operand by the second to find the remainder
 
-variable = 7 % 3  # variable = 1
-print(variable)
+print(7 % 3)  # Output = 1
 
-# Exponents "**"
+# Exponent "**"
 # Raises the first operand to the power of the second (exponent)
 
-variable = 10 ** 3  # variable = 1000
-print(variable)
+print(10 ** 3)  # Output = 1000
 
 # The operator precedence is:
 #   brackets
@@ -199,6 +191,52 @@ variable = 3 + 2 * 10  # variable = 23
 print(variable)
 
 variable = (3 + 2) * 10  # variable = 50
+print(variable)
+
+# The arithmetic operators can be used while assigning values to variables
+
+# Addition
+# Frequently referred to as incrementing a value
+
+variable = 1
+variable += 1  # variable = 2
+print(variable)
+
+# Subtraction
+# Frequently referred to as decrementing a value
+
+variable = 2
+variable -= 1  # variable = 1
+print(variable)
+
+# Multiplication
+
+variable = 2
+variable *= 3  # variable = 6
+print(variable)
+
+# Division
+
+variable = 6
+variable /= 3  # variable = 2.0
+print(variable)
+
+# Floor division
+
+variable = 7
+variable //= 3  # variable = 2
+print(variable)
+
+# Modulus
+
+variable = 7
+variable %= 3  # variable = 1
+print(variable)
+
+# Exponent
+
+variable = 10
+variable **= 3  # variable = 1000
 print(variable)
 
 # Additionally, Python offers the following mathematical functions:
@@ -250,3 +288,58 @@ print(pow(10, 3))  # Output = 1000
 # Modulus can be used as well (base, exponent, modulus)
 
 print((pow(10, 3, 3)))  # Output = 1
+
+# A sequence of integers can be generated via the range() function
+# Float is not supported
+# Range is a data type similar to sets or tuples
+
+variable = range(10)  # Range from 0 to 9 (10 is not included)
+print(variable)  # Output = range(0, 10)
+for value in variable:
+    print(value)  # Prints values from 0 to 9
+print(type(variable))
+
+# range() can be called with one argument (stop)
+
+variable = range(5)  # Range from 0 to 4 (5 is not included)
+for value in variable:
+    print(value)  # Prints values from 0 to 4
+
+# range() can be called with two arguments (start, stop)
+
+variable = range(5, 9)  # Range from 5 to 8 (9 is not included)
+for value in variable:
+    print(value)  # Prints values from 5 to 8
+
+# range() can be called with three arguments (start, stop, step)
+# The default step value is 1
+# Step must not be 0
+
+variable = range(1, 10, 2)  # Range from 1 to 10 using a step of 2
+for value in variable:
+    print(value)  # Prints the values 1, 3, 5, 7 and 9
+
+# Negative step values are possible as well
+
+variable = range(10, 0, -2)  # Range from 10 to 0 using a step of 2
+for value in variable:
+    print(value)  # Prints the values 10, 8, 6, 4 and 2 (0 not included)
+
+# Negative values for start and stop work too
+
+variable = range(-10, -20, -3)
+for value in variable:
+    print(value)  # Prints the values -10, -13, -16 and -19
+
+# Items can be accessed by the index value similar to a list
+
+variable = range(5)
+
+print(variable[0])  # Prints the first element 0
+print(variable[4])  # Prints the last element 4
+print(variable[-2])  # Prints the fourth element 3
+
+# range() is frequently used in for loops
+
+for i in range(1, 5):
+    print(i)  # Prints values from 1 to 4
