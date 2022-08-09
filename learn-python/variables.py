@@ -36,7 +36,7 @@ print(type(z))  # float 30.0
 # Python is case-sensitive (name != Name)
 # The names must start with a letter (NOT number) or underscore
 # Use alphanumeric characters or underscores
-# Agree upon a naming convention in group projects
+# Agree upon a naming convention in group projects (usually snake case)
 
 name = "Hello"
 Name = "World"
@@ -44,28 +44,28 @@ Name = "World"
 print(name)
 print(Name)
 
-othervariable = 1
+othervariable = 1  # A separator for multiple words is preferred
 otherVariable = 2  # This is known as camel case
-other_variable = 3  # Snake case
+other_variable = 3  # The preferred naming convention in Python is snake case
 _other_Variable = 4
-OtherVariable = 5  # Pascal case
+OtherVariable = 5  # This is known as pascal case
 OTHERVARIABLE = 6
 
 # Assign different values to multiple variables in a single line
 
-varOne, varTwo, varThree = 1, 2, 3
+var_one, var_two, var_three = 1, 2, 3
 
-print(varOne)
-print(varTwo)
-print(varThree)
+print(var_one)
+print(var_two)
+print(var_three)
 
 # Assign the same value to multiple variables in a single line
 
-varOne = varTwo = varThree = 1
+var_one = var_two = var_three = 1
 
-print(varOne)
-print(varTwo)
-print(varThree)
+print(var_one)
+print(var_two)
+print(var_three)
 
 # This can be used to swap the values of multiple variables as well
 
@@ -83,47 +83,47 @@ print(a, b, c)
 # This works for lists
 
 names = ["Alice", "Bob", "Charlie"]
-nameOne, nameTwo, nameThree = names
+name_one, name_two, name_three = names
 
-print(nameOne)
-print(nameTwo)
-print(nameThree)
+print(name_one)
+print(name_two)
+print(name_three)
 
 # tuples,
 
 numbers = (1, 2, 3)
-numberOne, numberTwo, numberThree = numbers
+number_one, number_two, number_three = numbers
 
-print(numberOne)
-print(numberTwo)
-print(numberThree)
+print(number_one)
+print(number_two)
+print(number_three)
 
 # strings,
 
 string = "Abc"
-stringOne, stringTwo, stringThree = string
+string_one, string_two, string_three = string
 
-print(stringOne)
-print(stringTwo)
-print(stringThree)
+print(string_one)
+print(string_two)
+print(string_three)
 
 # dictionaries
 
 dictionary = {"A": 1, "B": 2}
-keyOne, keyTwo = dictionary  # assign the keys
+key_one, key_two = dictionary  # assign the keys
 
-print(keyOne)
-print(keyTwo)
+print(key_one)
+print(key_two)
 
-valueOne, valueTwo = dictionary.values()  # assign the values
+value_one, value_two = dictionary.values()  # assign the values
 
-print(valueOne)
-print(valueTwo)
+print(value_one)
+print(value_two)
 
-itemOne, itemTwo = dictionary.items()  # assign the items as tuples
+item_one, item_two = dictionary.items()  # assign the items as tuples
 
-print(itemOne)
-print(itemTwo)
+print(item_one)
+print(item_two)
 
 # and coordinates (which in this case are a list of floats)
 
@@ -134,56 +134,56 @@ print(x, y)
 
 # Values can be ignored via "_"
 
-valueOne, _, valueThree = (1, 2, 3)
+value_one, _, value_three = (1, 2, 3)
 
-print(valueOne)
-print(valueThree)
+print(value_one)
+print(value_three)
 
 # and multiple values can be assigned to one variable via "*"
 
-valueOne, *valueTwo, valueThree = (1, 2, 3, 4, 5)
+value_one, *value_two, value_three = (1, 2, 3, 4, 5)
 
-print(valueOne)
-print(valueTwo)  # Output = [2, 3, 4]
-print(valueThree)
+print(value_one)
+print(value_two)  # Output = [2, 3, 4]
+print(value_three)
 
 # Both can be combined as well
 
-*_, valueTwo, valueThree = (1, 2, 3, 4, 5)
+*_, value_two, value_three = (1, 2, 3, 4, 5)
 
-print(valueTwo)  # Output = 4
-print(valueThree)  # Output = 5
+print(value_two)  # Output = 4
+print(value_three)  # Output = 5
 
 # Use print() to output a single variable
 
-varOne = 1
+var_one = 1
 
-print(varOne)
+print(var_one)
 
 # Use print() to output multiple variables
 
-varOne, varTwo, varThree = "How", "are", "you?"
+var_one, var_two, var_three = "How", "are", "you?"
 
-print(varOne, varTwo, varThree)
+print(var_one, var_two, var_three)
 
 # The "+" operator can be used as well (notice the lack of spaces)
 
-print(varOne + varTwo + varThree)
+print(var_one + var_two + var_three)
 
 # This does NOT work for numbers because "+" is a mathematical operator
 # (addition) in this case
 
-varOne, varTwo, varThree = 1, 2, 3
+var_one, var_two, var_three = 1, 2, 3
 
-print(varOne + varTwo + varThree)
+print(var_one + var_two + var_three)
 
 # If both a number (e.g. 1) and string (e.g. "Hello") are printed via "+"
 # operator, an error occurs
 # Use ","  to output multiple variables, especially of different data types
 
-varOne, varTwo = 1, "Hello"
+var_one, var_two = 1, "Hello"
 
-print(varOne, varTwo)
+print(var_one, var_two)
 
 # Local variables are created in a function and can only be used within it
 # Global variables are created outside of functions and can be used anywhere
