@@ -208,6 +208,7 @@ variable = "Hello World!"
 print(variable.swapcase())  # Output = "hELLO wORLD!"
 
 # Remove whitespaces from the beginning and end of a string
+# Works for "\n" (new line), "\t" (horizontal tab) and "\v" (vertical tab) too
 
 variable = " How are you? "
 print(variable.strip())
