@@ -122,9 +122,41 @@ print(variable)
 # A random number can be generated via Python's built-in "random" module
 # Notice the "import random" at the top of this .py file (module)
 
+# Random int between 1 and 100
+
+variable = random.randint(1, 100)
+print(variable)
+print(type(variable))
+
+# Random int between 1 and 99 (100 is excluded)
+
 variable = random.randrange(1, 100)
 print(variable)
 print(type(variable))
+
+# Random int between 0 and 99 (100 is excluded) with step 2
+
+variable = random.randrange(0, 100, 2)
+print(variable)
+print(type(variable))
+
+# Random float between 0 and 1
+
+variable = random.random()
+print(variable)
+print(type(variable))
+
+# Random element from a non-empty sequence
+
+numbers = [1, 2, 4, 42, 100, 3, 7]
+choice = random.choice(numbers)
+print(choice)
+print(type(choice))
+
+numbers = (1, 2, 4, 42, 100, 3, 7)
+choice = random.choice(numbers)
+print(choice)
+print(type(choice))
 
 # Underscore separators can be replaced by a symbol in f-strings
 variable = 1_000_000
