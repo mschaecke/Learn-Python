@@ -205,17 +205,28 @@ print(7 % 3)  # Output = 1
 
 print(10 ** 3)  # Output = 1000
 
-# The operator precedence is:
-#   brackets
-#   exponents
-#   division
-#   multiplication
-#   floor division
-#   modulus
-#   addition
-#   subtraction
+# Operator precedence
+# Upper groups have a higher precedence than lower ones
+# The empty line separates groups of operators with the same precedence
+
+# Brackets / Parentheses ()
+
+# Exponents **
+
+# Division /
+# Multiplication *
+# Floor division //
+# Modulus %
+
+# Addition +
+# Subtraction -
 
 # https://docs.python.org/3/reference/expressions.html#operator-precedence
+
+# If the operators have the same precedence, the associativity is left-to-right
+
+variable = 10 / 2 // 3  # variable = 1.0
+print(variable)
 
 # Brackets (parentheses) can be used to change the operator precedence:
 
