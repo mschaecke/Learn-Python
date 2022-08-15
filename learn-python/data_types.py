@@ -18,9 +18,4 @@ print(type(variable))
 # Alternatively, the data type can be specified via constructor functions
 # (referred to as casting)
 
-# The following data types will be elaborated in their respective .py files:
-#   * Strings (strings.py)
-#   * Numbers (numbers.py)
-
-# Utilize NumPy (numerical data) or pandas (tabular data) instead of regular
-# Python for optimal performance (more advanced)
+# The different data types are covered in the corresponding .py files
