@@ -48,7 +48,7 @@ variable = str(2.3)
 print(variable)
 print(type(variable))
 
-# Strings are arrays of characters
+# Strings are lists of characters
 # Individual characters are strings with a length of 1
 
 # The len() function can be used to get the length of a string
@@ -56,10 +56,10 @@ print(type(variable))
 variable = "Hello"
 print(len(variable))  # Output = 5
 
-# String elements can be accessed via [] just like array elements
+# String elements can be accessed via [] just like list elements
 
 variable = "World"
-print(variable[4])  # Output = "d" because arrays start at position 0
+print(variable[4])  # Output = "d" because lists start at index 0
 
 # Ranges of a string can be accessed using [] (referred to as slicing)
 # The start and end index are specified within the []
@@ -115,7 +115,7 @@ for character in variable:
 variable = "Hello World! Hello World! Hello World!"
 print(variable.count("Hello"))  # Output = 3
 
-# Identify the position of a value within the string
+# Identify the index of a value within the string
 
 variable = "Hello World!"
 print(variable.find("orl"))  # Output = 7
