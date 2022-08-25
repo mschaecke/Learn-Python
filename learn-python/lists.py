@@ -131,8 +131,6 @@ print(variable)  # Output = [1, 2, 3, 4, 5]
 variable.extend(variable_three)
 print(variable)  # Output = [1, 2, 3, 4, 5, 6, 7]
 
-# TODO: Remove items
-
 # Multiple values can be changed using a specified range
 
 variable = [1, 2, 3, 4, 5]
@@ -153,6 +151,32 @@ print(len(variable))  # Output = 3
 variable[:2] = [0, 9, 8, 7, 6]  # Replaces all values before index 2
 print(variable)
 print(len(variable))  # Output = 6
+
+# There are multiple ways to remove items
+
+variable = [1, 2, 3, 4, 5]
+print(variable)
+
+variable.remove(4)  # Removes the specified item
+print(variable)
+
+variable.pop()  # Removes the last item
+print(variable)
+
+variable.pop(1)  # Removes item at the specified index
+print(variable)
+
+del variable[0]  # Removes item at the specified index as well
+print(variable)
+
+# The entire list can be cleared or deleted
+
+variable = [1, 2, 3]
+print(variable)
+variable.clear()  # variable = []
+print(variable)
+
+del variable  # variable is completely deleted
 
 # TODO: List sorting
 
