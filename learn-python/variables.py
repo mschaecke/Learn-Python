@@ -36,7 +36,7 @@ print(type(z))  # float 30.0
 # Python is case-sensitive (name != Name)
 # The names must start with a letter (NOT number) or underscore
 # Use alphanumeric characters or underscores
-# Agree upon a naming convention in group projects (usually snake case)
+# Agree upon a naming convention in group projects (often snake case)
 
 name = "Hello"
 Name = "World"
@@ -46,7 +46,7 @@ print(Name)
 
 othervariable = 1  # A separator for multiple words is preferred
 otherVariable = 2  # This is known as camel case
-other_variable = 3  # The preferred naming convention in Python is snake case
+other_variable = 3  # A common naming convention in Python is snake case
 _other_Variable = 4
 OtherVariable = 5  # This is known as pascal case
 OTHERVARIABLE = 6
