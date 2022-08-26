@@ -7,8 +7,8 @@ number = 1  # A comment after code
 # comment
 
 '''
-Another multiline comment
-using string literals
-not assigned to a variable
-(bad practice)
+Another multiline comment 
+using string literals which 
+are not assigned to a variable
+(e.g. for docstrings)
 '''
