@@ -1,3 +1,5 @@
+from copy import deepcopy
+
 # Lists are collections of data
 # They are a built-in data type in Python (just like tuples, sets and
 # dictionaries) and work similar to arrays in other programming languages
@@ -131,6 +133,17 @@ print(2 in variable)  # Prints True
 
 variable = ["Alice", "Bob"]
 print("Charlie" in variable)  # Prints False
+
+# Count the amount of a specific element within the list via count()
+
+variable = [1, 2, 3, 1, 3, 5, 2, 1]
+print(variable.count(1))  # Prints 3
+
+# Return the index of the first occurrence of a specific element within the
+# list via index() method
+
+variable = [1, 2, 3, 1, 3, 5, 2, 1]
+print(variable.count(3))  # Prints 2
 
 # Items can be added, modified and removed
 
@@ -267,14 +280,124 @@ variable = [1, 2, 3, 4, 5]
 variable.sort(key=even, reverse=True)
 print(variable)  # Prints [2, 4, 1, 3, 5]
 
-# TODO: Other list methods
+# Copy by value
+# Python usually references lists rather than copying them
 
-# The constructor function list() can be used to create a list as well
+original_list = [1, 2, 3]
+list_copy = original_list
+print(list_copy)  # Prints [1, 2, 3]
+
+original_list.append(4)
+print(original_list)  # Prints [1, 2, 3, 4]
+print(list_copy)  # Also prints [1, 2, 3, 4] because it is a reference
+
+list_copy.append(5)
+print(original_list)  # Prints [1, 2, 3, 4, 5]
+print(list_copy)  # Also prints [1, 2, 3, 4, 5] because it is a reference
+
+# It is possible to copy lists using the following options
+
+# List slicing
+
+original_list = [1, 2, 3]
+list_copy = original_list[:]
+print(list_copy)  # Prints [1, 2, 3]
+
+original_list.append(4)
+print(original_list)  # Prints [1, 2, 3, 4]
+print(list_copy)  # Prints [1, 2, 3] because it is a copy
+
+list_copy.append(5)
+print(original_list)  # Prints [1, 2, 3, 4] (5 was not added)
+print(list_copy)  # Prints [1, 2, 3, 5] because it is a copy
+
+# copy() method (shallow copy)
+# Useful option for 1D lists
+# Only copies references to nested objects like lists within lists
+
+original_list = [1, 2, 3]
+list_copy = original_list.copy()
+print(list_copy)  # Prints [1, 2, 3]
+
+original_list.append(4)
+print(original_list)  # Prints [1, 2, 3, 4]
+print(list_copy)  # Prints [1, 2, 3] because it is a copy
+
+list_copy.append(5)
+print(original_list)  # Prints [1, 2, 3, 4] (5 was not added)
+print(list_copy)  # Prints [1, 2, 3, 5] because it is a copy
+
+# deepcopy() function (deep copy)
+# Requires "from copy import deepcopy" or "import copy"
+# Useful for multidimensional lists
+# Recursively copies nested objects as well
+
+# Shallow copy example
+
+original_list = [[1, 2], [3, 4]]
+list_copy = original_list.copy()
+print(list_copy)  # Prints [1, 2, 3]
+
+original_list[0][1] = 5
+print(original_list)  # Prints [[1, 5], [3, 4]]
+print(list_copy)  # Prints [[1, 5], [3, 4]] because it is a shallow copy
+
+# Deep copy example
+
+original_list = [[1, 2], [3, 4]]
+list_copy = deepcopy(original_list)
+print(list_copy)  # Prints [[1, 2], [3, 4]]
+
+original_list[0][1] = 5
+print(original_list)  # Prints [[1, 5], [3, 4]]
+print(list_copy)  # Prints [[1, 2], [3, 4]] because it is a deep copy
+
+# The constructor function list() can be used to create a list
 # (unlike the [] notion, the function uses two parenthesis)
 
 variable = list((1, 2, "Hello", "World", False))
 print(variable)
 print(type(variable))
+
+# Copy via constructor function list()
+
+original_list = [1, 2, 3]
+list_copy = list(original_list)
+print(list_copy)  # Prints [1, 2, 3]
+
+original_list.append(4)
+print(original_list)  # Prints [1, 2, 3, 4]
+print(list_copy)  # Prints [1, 2, 3] because it is a copy
+
+list_copy.append(5)
+print(original_list)  # Prints [1, 2, 3, 4] (5 was not added)
+print(list_copy)  # Prints [1, 2, 3, 5] because it is a copy
+
+# Concatenating lists
+# There are multiple ways to concatenate lists
+
+list_one = [1, 2, 3]
+list_two = [4, 5]
+
+# + operator
+
+list_three = list_one + list_two
+print(list_three)
+
+# extend() method
+
+list_one.extend(list_two)
+print(list_one)
+
+# append() method within a loop (appends each element individually)
+
+list_one = [1, 2, 3]
+list_two = [4, 5]
+
+for value in list_two:
+    list_one.append(value)
+
+print(list_one)
 
 # List comprehension
 # Uses the following syntax:
