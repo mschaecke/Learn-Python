@@ -164,4 +164,4 @@ print(type(variable))
 
 # Delete the tuple via the del keyword
 
-del variable  # Interacting with tuple after it was deleted will raise errors
+del variable  # Interacting with tuples after they are deleted will raise errors
